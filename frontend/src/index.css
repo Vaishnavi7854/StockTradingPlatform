@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.nav-link {
+  margin-left: 40px;
+}
+
+col {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.col a {
+  text-decoration: none;
+  color: black;
+  line-height: 2;
+}
+
+.custom-img {
+  width: 100%; 
+  max-width: 150px; 
+  height: auto; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#supportHero{
+   background-color: rgb(56, 126, 209);
+   color: white;
+}
+
+#supportHero a {
+   color: white;
+}
+
+#supportWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 150px;
+}
+
+#supportHero input{
+  padding: 20px 50px;
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.spaced-link {
+  margin-right: 15px; /* Adds space to the right of each anchor tag */
+}
+
+/* General body styles are already defined in your index.css */
+
+.form_container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto; /* Centering the form */
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #383838;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+/* Form input styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #383838;
+  margin-bottom: 0.5rem;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #383838;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: rgb(56, 126, 209); /* Matches the #supportHero background color */
+  outline: none;
+}
+
+/* Button styles */
+button {
+  padding: 15px;
+  background-color: rgb(56, 126, 209); /* Matches the #supportHero background color */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a73e8; /* Slightly darker shade for hover */
+}
+
+/* Link styles */
+span {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+span a {
+  color: rgb(56, 126, 209); /* Matches the #supportHero background color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+span a:hover {
+  color: #1a73e8; /* Slightly darker shade for hover */
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .form_container {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input[type="email"],
+  input[type="text"],
+  input[type="password"] {
+    font-size: 0.875rem;
+    padding: 0.65rem;
+  }
+
+  button {
+    padding: 0.65rem;
+    font-size: 0.875rem;
+  }
+}
+
+
+
+

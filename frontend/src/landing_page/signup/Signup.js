@@ -9,6 +9,7 @@ const Signup = () => {
     email: "",
     password: "",
     username: "",
+    createdAt: "",
   });
   const { email, password, username } = inputValue;
   const handleOnChange = (e) => {
@@ -31,10 +32,12 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const currentDate = new Date().toISOString();
       const { data } = await axios.post(
         "http://localhost:3002/signup",
         {
           ...inputValue,
+          createdAt: currentDate,
         },
         { withCredentials: true }
       );
@@ -55,6 +58,7 @@ const Signup = () => {
       email: "",
       password: "",
       username: "",
+      createdAt: "",
     });
   };
 

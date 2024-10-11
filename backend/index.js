@@ -15,7 +15,12 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors({credentials: true}));
+// app.use(cors({credentials: true}));
+// app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use("/", authRoute);
@@ -189,14 +194,35 @@ app.use("/", authRoute);
 //   res.send("Done!");
 // });
 
-app.get('/allHoldings', async(req, res) => {
+// app.get('/allHoldings', async(req, res) => {
+//     let allHoldings = await HoldingsModel.find({});
+//     res.json(allHoldings);
+// });
+
+// app.get('/allPositions', async(req, res) => {
+//     let allPositions = await PositionsModel.find({});
+//     res.json(allPositions);
+// });
+
+app.get('/allHoldings', async (req, res) => {
+  try {
     let allHoldings = await HoldingsModel.find({});
     res.json(allHoldings);
+  } catch (error) {
+    console.error("Error fetching holdings from database:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
-app.get('/allPositions', async(req, res) => {
+
+app.get('/allPositions', async (req, res) => {
+  try {
     let allPositions = await PositionsModel.find({});
     res.json(allPositions);
+  } catch (error) {
+    console.error("Error fetching positions from database:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 app.listen(PORT, () => {
